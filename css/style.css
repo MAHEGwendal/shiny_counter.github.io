@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    min-height: 100vh;
+  }
+
+  h1{
+    font-size: 2rem;
+    font-family: "Titan One", sans-serif;
+  }
+
+  header h1{
+    font-family: "Permanent Marker", cursive;
+  }
+
+  p{
+    font-size: 1.5rem;
+    font-family: "Titan One", sans-serif;
+  }
+
+
+  header {
+    grid-area: header;
+    background-color: #0D2847;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+
+  main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    gap: 1rem;
+    background-color: #111927;
+    color: white;
+  }
+
+
+  .btn_Compteur{
+    display: flex;
+    gap: 0.5rem; /* Espace entre les boutons */
+    flex-wrap: wrap; /* Pour que ça passe à la ligne sur petits écrans */
+    justify-content: center; /* Centrer le groupe si besoin */
+
+
+  }
+
+  .btn_Compteur button{
+    width: 100px; /* Fixe au lieu de 100% */
+    height: 50px;
+    border-radius: 25%;
+    background-color: #0090FF;
+    color: white;
+    font-size:1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn_Compteur button:hover{
+    background-color: #4aa0ff;
+  }
+
+  footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    background-color: #0D2847;
+    color: white;
+    gap: 0.5rem;
+  }
+
+  footer button{
+    background-color: transparent;
+    border: none;
+  }
+  footer button a svg {
+    width: 55px; /* Ajustez la largeur */
+    height: 55px; /* Ajustez la hauteur */
+    fill: white;
+}
+
+footer .text_left{
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+  margin-right: auto;
+  padding: 0.5rem;
+
+}
+
+@media (max-width: 768px) {
+  footer .text_left{
+    font-size: x-small;
+  }
+}
